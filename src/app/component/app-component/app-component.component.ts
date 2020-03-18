@@ -2,20 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { EditGameComponentComponent } from '../edit-game-component/edit-game-component.component';
 
 @Component({
-  selector: 'app-app-component',
+  selector: 'mio-app-component',
   templateUrl: './app-component.component.html',
   styleUrls: ['./app-component.component.scss']
 })
 export class AppComponentComponent implements OnInit {
 
+  nome : String ;
+
   constructor() { 
-        var list = [
-          {MortalKombatX : EditGameComponentComponent},
-          {MortalKombat11 : EditGameComponentComponent},
-          {Injustice2 : EditGameComponentComponent},
-          {Cuphead : EditGameComponentComponent},
-          {DarkSouls3 : EditGameComponentComponent}
-        ];
+ 
+        this.nome='Mortal Kombat 11';
   }
 
   ngOnInit(): void {
