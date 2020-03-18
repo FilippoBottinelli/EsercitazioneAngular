@@ -1,0 +1,2 @@
+# EsercitazioneAngular
+Esercitazione Angular : videogames
