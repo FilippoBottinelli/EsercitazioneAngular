@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EditGameComponentComponent } from '../edit-game-component/edit-game-component.component';
 
 @Component({
   selector: 'app-app-component',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+        var list = [
+          {MortalKombatX : EditGameComponentComponent},
+          {MortalKombat11 : EditGameComponentComponent},
+          {Injustice2 : EditGameComponentComponent},
+          {Cuphead : EditGameComponentComponent},
+          {DarkSouls3 : EditGameComponentComponent}
+        ];
+  }
 
   ngOnInit(): void {
   }
