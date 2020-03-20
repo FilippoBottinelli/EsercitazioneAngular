@@ -7,6 +7,19 @@ import { HomeComponentComponent } from './component/home-component/home-componen
 import { GamesListComponentComponent } from './component/games-list-component/games-list-component.component';
 import { GameDetailComponentComponent } from './component/game-detail-component/game-detail-component.component';
 import { EditGameComponentComponent } from './component/edit-game-component/edit-game-component.component';
+import { RouterModule, Routes } from '@angular/router';​
+
+const appRoutes: Routes = [​
+
+  { path: 'home', component: HomeComponentComponent },​
+
+  { path: 'games-list', component: GamesListComponentComponent },​
+
+  { path: 'game-detail', component: GameDetailComponentComponent },​
+
+  { path: 'edit-game', component: EditGameComponentComponent }
+
+];​
 
 @NgModule({
   declarations: [
@@ -18,9 +31,13 @@ import { EditGameComponentComponent } from './component/edit-game-component/edit
     EditGameComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(​
+      appRoutes
+    )​
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
