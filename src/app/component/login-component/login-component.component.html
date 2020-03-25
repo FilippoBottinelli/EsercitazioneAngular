@@ -1,1 +1,6 @@
 <h2>LogIn</h2>
+<input type="text" id="nome" placeholder="inserire nome" [(ngModel)]="user" (ngModelChange)="assegnaUser($event)">
+<br><br>
+<input type="password" id="password" placeholder="inserire password"  [(ngModel)]="password" (ngModelChange)="assegnaPassword($event)">
+<br><br>
+<button (click)="bottoneClick()" type="button">LogIn</button>

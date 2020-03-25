@@ -1,4 +1,16 @@
-h2
-{
+h2{
     color:blueviolet;
+}
+input {
+    resize: none;
+    background-color:rgba(137, 43, 226, 0.411);
+}
+::placeholder{
+    color:purple;
+}
+button{
+    color:blueviolet;
+    background-color: rgba(128, 0, 128, 0.267);
+    outline-color: blueviolet;
+    border-color: blueviolet;
 }

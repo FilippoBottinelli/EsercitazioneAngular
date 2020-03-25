@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponentComponent } from './component/menu-component/menu-component.component';
@@ -9,6 +10,7 @@ import { GameDetailComponentComponent } from './component/game-detail-component/
 import { EditGameComponentComponent } from './component/edit-game-component/edit-game-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponentComponent } from './component/login-component/login-component.component';​
+
 
 const appRoutes: Routes = [​
 
@@ -37,6 +39,7 @@ const appRoutes: Routes = [​
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(​
       appRoutes
     )​
