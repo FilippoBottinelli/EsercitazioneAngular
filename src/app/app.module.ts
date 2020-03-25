@@ -7,9 +7,12 @@ import { HomeComponentComponent } from './component/home-component/home-componen
 import { GamesListComponentComponent } from './component/games-list-component/games-list-component.component';
 import { GameDetailComponentComponent } from './component/game-detail-component/game-detail-component.component';
 import { EditGameComponentComponent } from './component/edit-game-component/edit-game-component.component';
-import { RouterModule, Routes } from '@angular/router';​
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponentComponent } from './component/login-component/login-component.component';​
 
 const appRoutes: Routes = [​
+
+  { path: 'login', component: LoginComponentComponent },​
 
   { path: 'home', component: HomeComponentComponent },​
 
@@ -25,10 +28,12 @@ const appRoutes: Routes = [​
   declarations: [
     AppComponent,
     MenuComponentComponent,
+    LoginComponentComponent,
     HomeComponentComponent,
     GamesListComponentComponent,
     GameDetailComponentComponent,
-    EditGameComponentComponent
+    EditGameComponentComponent,
+    LoginComponentComponent
   ],
   imports: [
     BrowserModule,

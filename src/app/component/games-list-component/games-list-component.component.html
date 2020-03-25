@@ -1,7 +1,8 @@
 <h2>Lista giochi</h2>
 <ul>
     <li *ngFor="let item of listaGiochi">
-        {{item.nome}}
+        <!--a routerLink="edit-game" routerLinkActive="false">{{item.nome}}</a-->
+        <a class="edit-game" [routerLink]="['item', item.id]">{{item.nome}}</a>
         <p></p>
     </li>
 </ul>
