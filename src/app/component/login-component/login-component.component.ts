@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgModel, FormGroup } from '@angular/forms';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-login-component',
@@ -9,18 +9,23 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class LoginComponentComponent implements OnInit {
 
-loginForm: FormGroup;
-login = false;
-
-username:string = this.loginForm.value.username;
-password:string = this.loginForm.value.password;
-
-  constructor() {
+  loginForm: FormGroup;
+ 
+  
     
-   }
-   MioLogIn(){
+  
+  
+  username:string;
+  password:string;
+  
+    constructor() {
+  
+     }
 
-   }
+     eseguoLogIn(){
+      sessionStorage.setItem("nome",this.username);
+      sessionStorage.setItem("password",this.password);
+     }
 
   ngOnInit(): void {
 
