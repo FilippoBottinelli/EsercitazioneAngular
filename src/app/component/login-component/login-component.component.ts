@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login-component',
@@ -8,24 +9,17 @@ import { NgModel } from '@angular/forms';
 })
 export class LoginComponentComponent implements OnInit {
 
-user : string;
-password : string;
+loginForm: FormGroup;
+login = false;
 
-assegnaUser(event){
-  this.user=event;
-}
-assegnaPassword(event){
-  this.password=event;
-}
-
-  bottoneClick() {
-    sessionStorage.setItem("nome",this.user);
-    sessionStorage.setItem("password",this.password);
-  }
-
-  
+username:string = this.loginForm.value.username;
+password:string = this.loginForm.value.password;
 
   constructor() {
+    
+   }
+   MioLogIn(){
+
    }
 
   ngOnInit(): void {
