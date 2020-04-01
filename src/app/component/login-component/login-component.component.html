@@ -1,22 +1,21 @@
+<form (ngSubmit)="eseguoLogIn()">
+  <h2>LogIn</h2>
+  <div class="form-group">
 
-    <form (ngSubmit)="eseguoLogIn()">
-      <h2>LogIn</h2>
-      <div class="form-group">
+    <div>
+      <label for="username">Name</label>
+      <br>
+      <input [(ngModel)]="username" placeholder="inserire username" name="username" required>
+    </div>
 
-      <div>
-        <label for="username">Name</label>
-        <br>
-        <input [(ngModel)]="username" placeholder="inserire username" name="username" required>
-      </div>
+    <div>
+      <label for="password">Password</label>
+      <br>
+      <input [(ngModel)]="password" type="password" placeholder="inserire password" name="password" required>
+    </div>
 
-      <div>
-        <label for="password">Password</label>
-        <br>
-        <input [(ngModel)]="password" placeholder="inserire password" name="password" required>
-      </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-success" id="bottoneLogin">LogIn</button>
 
-      </div>
-
-      <button type="submit" class="btn btn-success" id="bottoneLogin">LogIn</button>
-
-    </form>
+</form>

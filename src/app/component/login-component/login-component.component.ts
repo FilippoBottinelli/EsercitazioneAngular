@@ -9,23 +9,18 @@ import { stringify } from 'querystring';
 })
 export class LoginComponentComponent implements OnInit {
 
-  loginForm: FormGroup;
- 
-  
-    
-  
-  
-  username:string;
-  password:string;
-  
-    constructor() {
-  
-     }
 
-     eseguoLogIn(){
-      sessionStorage.setItem("nome",this.username);
-      sessionStorage.setItem("password",this.password);
-     }
+  username: string;
+  password: string;
+
+  constructor() {
+
+  }
+
+  eseguoLogIn() {
+    sessionStorage.setItem("nome", this.username);
+    sessionStorage.setItem("password", this.password);
+  }
 
   ngOnInit(): void {
 
