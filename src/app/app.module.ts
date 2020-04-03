@@ -10,20 +10,20 @@ import { GameDetailComponentComponent } from './component/game-detail-component/
 import { EditGameComponentComponent } from './component/edit-game-component/edit-game-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponentComponent } from './component/login-component/login-component.component';​
-import { AuthGuard } from './service/auth-guard.service';
+import { AuthGuardService } from './service/auth-guard.service';
 
 
 const appRoutes: Routes = [​
 
   { path: 'login', component: LoginComponentComponent},​
 
-  { path: 'home', component: HomeComponentComponent, canActivate: [AuthGuard]  },​
+  { path: 'home', component: HomeComponentComponent, canActivate: [AuthGuardService]  },​
 
-  { path: 'games-list', component: GamesListComponentComponent , canActivate: [AuthGuard] },​
+  { path: 'games-list', component: GamesListComponentComponent , canActivate: [AuthGuardService] },​
 
-  { path: 'game-detail', component: GameDetailComponentComponent , canActivate: [AuthGuard] },​
+  { path: 'game-detail', component: GameDetailComponentComponent , canActivate: [AuthGuardService] },​
 
-  { path: 'edit-game', component: EditGameComponentComponent, canActivate: [AuthGuard]  }
+  { path: 'edit-game', component: EditGameComponentComponent, canActivate: [AuthGuardService]  }
 
 ];​
 

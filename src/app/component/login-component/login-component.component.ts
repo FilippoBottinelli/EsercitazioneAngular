@@ -19,7 +19,6 @@ export class LoginComponentComponent implements OnInit {
 
   eseguoLogIn() {
     sessionStorage.setItem("nome", this.username);
-    sessionStorage.setItem("password", this.password);
   }
 
   ngOnInit(): void {

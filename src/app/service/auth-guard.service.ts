@@ -2,27 +2,22 @@ import { Injectable } from '@angular/core';
 import { CanActivate }    from '@angular/router';​
 
 ​
+@Injectable({
+  providedIn: 'root'
+})
 
-@Injectable()​
+export class AuthGuardService implements CanActivate {
 
-export class AuthGuard implements CanActivate {​
+  constructor() { }
 
   canActivate() {​
 
     //verifico che i dati di login corrispondano a quelli scelti da me
 
-    if(sessionStorage.getItem("nome")=="marco" && sessionStorage.getItem("password")=="123")
+    if(sessionStorage.getItem("nome")!= null)
     return true;​
+    else
+    return false;
 
   }​
-
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-
-export class AuthGuardService {
-
-  constructor() { }
 }
